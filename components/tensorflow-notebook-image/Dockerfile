@@ -146,6 +146,9 @@ RUN pip --no-cache-dir install -r /tmp/requirements.txt && \
 WORKDIR $HOME
 RUN rm -fr $(ls -A $HOME)
 
+# Activate comet_ml jupyter extension
+RUN jupyter comet_ml enable
+
 # Copy over init scripts
 COPY --chown=jovyan:users start-singleuser.sh start-notebook.sh start.sh pvc-check.sh /usr/local/bin/
 RUN chmod a+rx /usr/local/bin/*

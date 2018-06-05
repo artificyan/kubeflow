@@ -16,3 +16,6 @@ matplotlib
 
 # Google Cloud related packages
 google-cloud-storage
+
+# Comet-ml
+comet-ml
